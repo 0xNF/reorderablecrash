@@ -1,16 +1,9 @@
-# reorderablecrash
+This project is used to demonstrate how projects built using Flutter, running on Windows, will crash when the project imports the [reorderablelistview]9https://api.flutter.dev/flutter/material/ReorderableListView-class.html) widget.
 
-A new Flutter project.
 
-## Getting Started
+The crash takes a few forms:
 
-This project is a starting point for a Flutter application.
+1. If running in release mode, the application will hard crash to desktop, leaving no traces whatsoever
+1. If running in Debug mode, an "Abort?" dialog box will be called. 
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The reasons for this crash are documented on the Flutter Engine repo in [this thread](https://github.com/flutter/flutter/issues/103808#issuecomment-1144347869)
